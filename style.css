@@ -20,6 +20,7 @@ body {
     color: white;
     text-align: center;
     text-shadow: 0px 0px 5px skyblue, 2px 2px 10px white;
+    cursor: pointer;
 }
 
 #score_board {
@@ -70,8 +71,10 @@ body {
 }
 
 .car {
+    position: absolute;
     width: 130px;
     height: 130px;
+    padding: auto;
 }
 
 .car img {
@@ -87,4 +90,26 @@ body {
 .car#my {
     position: absolute;
     bottom: 10px;
+    left: 10px;
+    transition-duration: 100ms;
+}
+
+#gameover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 70px;
+    text-shadow: 0px 0px 5px black;
+    color: orange;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    height: 600px;
+    width: 800px;
+    background: url('images/fire2.png');
+    background-size: cover;
+    display: none;
 }
