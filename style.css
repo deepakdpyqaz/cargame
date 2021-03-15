@@ -5,9 +5,9 @@
 }
 
 body {
-    background: url('images/bg2.jpg') #0277bd;
+    background: linear-gradient(rgb(4, 128, 4), rgb(1, 59, 28), rgb(4, 128, 4));
     background-size: cover;
-    background-repeat: no-repeat;
+    animation: walk 6s linear infinite;
 }
 
 #title {
@@ -52,18 +52,28 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    background: black;
+    background: linear-gradient(black, white);
     margin: 0px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
 
 #main_container #game .lane {
-    background: black;
+    background: linear-gradient(rgb(15, 15, 15), black, rgb(15, 15, 15));
     height: 100%;
     border-left: 5px dashed white;
     display: flex;
+    animation: walk 4s linear infinite;
     justify-content: center;
+}
+
+@keyframes walk {
+    0% {
+        background-position: 0px -100vw;
+    }
+    100% {
+        background-position: 0px 0px;
+    }
 }
 
 #main_container #game .lane:nth-child(1) {
